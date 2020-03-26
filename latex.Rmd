@@ -1,0 +1,28 @@
+---
+title: "Prueba"
+author: "Horacio"
+output:
+  pdf_document
+documentclass: article  
+header-includes:
+  \usepackage{tikz}
+  \usetikzlibrary{positioning,calc,shapes.geometric,shapes,arrows.meta,arrows,decorations.markings,external,trees}
+  \tikzstyle{Arrow} = [thick, decoration={ markings, mark=at position 1 with {\arrow[thick]{latex}}}, shorten >= 3pt, preaction = {decorate} ]
+---
+
+```{r setup, include=FALSE}
+    knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+\begin{figure}[htb]
+\centering
+\begin{tikzpicture}
+  \node (1) {A};
+  \node [right =of 1] (2) {Y};
+  
+  \draw [Arrow] (1.east) -- (2.west);
+\end{tikzpicture}
+\caption{Causal diagram example}
+\label{fig:pxxfig1}
+\end{figure}
